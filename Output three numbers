@@ -1,0 +1,77 @@
+#Напишите программу, которая получает на вход три целых числа, по одному числу в строке,
+# и выводит на консоль в три строки сначала максимальное, потом минимальное, после чего оставшееся число.
+#На ввод могут подаваться и повторяющиеся числа.
+a = int(input())
+b = int(input())
+c = int(input())
+
+# Когда все числа равны
+if a==b==c:
+    print(a)
+    print(b)
+    print(c)
+
+# Когда числа не равны
+# первое самое большое
+if a>b and a>c and b!=c and b>c: # второе больше третьего
+    print(a)
+    print(c)
+    print(b)
+if a>b and a>c and b!=c and c>b: # третье больше второго
+    print(a)
+    print(b)
+    print(c)
+
+# Когда числа не равны
+# второе самое большое
+if b>c and b>a and c!=a and a>c: # первое больше третьего
+    print(b)
+    print(c)
+    print(a)
+if b>c and b>a and c!=a and c>a: # третье больше первого
+    print(b)
+    print(a)
+    print(c)
+
+# Когда числа не равны
+# третье самое больше
+if c>b and c>a and b!=a and b>a: # второе больше первого
+    print(c)
+    print(a)
+    print(b)
+if c>b and c>a and b!=a and a>b: # первое больше второго
+    print(c)
+    print(b)
+    print(a)
+
+# Когда первое и второе числа равны
+if a==b and a>c: # Третье меньше первого и второго
+    print(a)
+    print(c)
+    print(b)
+if a==b and a<c: # Третье больше первого и второго
+    print(c)
+    print(a)
+    print(b)
+
+
+# Когда первое и третье числа равны
+if a==c and a>b: # Второе меньше первого и третьего
+    print(a)
+    print(b)
+    print(c)
+if a==c and a<b: # Второе больше первого и третьего
+    print(b)
+    print(a)
+    print(c)
+
+
+# Когда втрое и третье числа равны
+if  b==c and b<a: # Первое больше второго и третьего
+    print(a)
+    print(b)
+    print(c)
+if b==c and b>a: # Первое меньше второго и третьего
+    print(b)
+    print(a)
+    print(c)
